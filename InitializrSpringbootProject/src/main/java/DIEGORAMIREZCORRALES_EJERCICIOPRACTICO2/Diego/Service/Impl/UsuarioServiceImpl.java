@@ -16,18 +16,24 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UsuarioServiceImpl implements UsuarioService {
-    @Autowired
-    private UsuarioDao usuarioDao;  
 
+    // Inyección de dependencia del UsuarioDao en el servicio
+    @Autowired
+    private UsuarioDao usuarioDao;
+
+    // Método para autenticar a un usuario dado su correo y contraseña
+    // Retorna un objeto Usuario que representa al usuario autenticado, o null si no se encuentra
     @Override
     public Usuario autenticarUsuario(String correo, String contrasena) {
-
         return usuarioDao.findByCorreoAndContrasena(correo, contrasena);
     }
-    
+
+    // Método para guardar un usuario en la base de datos
+    // Retorna el usuario guardado
     @Override
-    public Usuario save(Usuario nombre_usuario ) {
-        usuarioDao.save(nombre_usuario );
-        return nombre_usuario ;
+    public Usuario save(Usuario usuario) {
+        usuarioDao.save(usuario);
+        return usuario;
     }
 }
+

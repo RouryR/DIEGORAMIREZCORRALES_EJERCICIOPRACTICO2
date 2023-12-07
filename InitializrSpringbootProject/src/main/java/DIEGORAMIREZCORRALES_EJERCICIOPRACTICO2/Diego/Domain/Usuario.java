@@ -14,24 +14,28 @@ import jakarta.persistence.Table;
  * @author ROURY
  */
 @Entity
-//MAPEA LA TABLA CLIENTE PARA INTERACTUAR CON SUS DATOS
+// MAPEA LA TABLA CLIENTE PARA INTERACTUAR CON SUS DATOS
 @Table(name = "Cliente")
 public class Usuario {
-     @Id
-    private int id_Cliente;    
-    private String nombre;    
+    @Id
+    private int id_Cliente;
+
+    private String nombre;
     private String apellido;
     private String correo;
     private String telefono;
     private String nombre_usuario;
-    private String contrasena;    
+    private String contrasena;
     private Long id_rol;
     private Boolean activo;
 
-public Usuario() {
+    // Constructor vacío requerido por JPA
+    public Usuario() {
     }
 
-    public Usuario(int id_Cliente, String nombre, String apellido, String correo, String telefono, String nombre_usuario, String contrasena, Long id_rol, Boolean activo) {
+    // Constructor con parámetros para facilitar la creación de instancias
+    public Usuario(int id_Cliente, String nombre, String apellido, String correo, String telefono, String nombre_usuario,
+            String contrasena, Long id_rol, Boolean activo) {
         this.id_Cliente = id_Cliente;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -42,7 +46,9 @@ public Usuario() {
         this.id_rol = id_rol;
         this.activo = activo;
     }
-    
+
+    // Métodos getter y setter para acceder a los campos privados
+
     public int getId() {
         return id_Cliente;
     }
@@ -63,7 +69,7 @@ public Usuario() {
         return apellido;
     }
 
-public void setApellido(String apellido) {
+    public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 
@@ -99,7 +105,7 @@ public void setApellido(String apellido) {
         this.contrasena = contrasena;
     }
 
-public Long getId_rol() {
+    public Long getId_rol() {
         return id_rol;
     }
 
@@ -114,5 +120,4 @@ public Long getId_rol() {
     public void setActivo(Boolean activo) {
         this.activo = activo;
     }
-    
 }

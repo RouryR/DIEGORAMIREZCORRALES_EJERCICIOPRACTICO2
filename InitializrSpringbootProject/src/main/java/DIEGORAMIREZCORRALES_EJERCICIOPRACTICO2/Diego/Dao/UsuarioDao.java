@@ -12,5 +12,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author ROURY
  */
 public interface UsuarioDao extends JpaRepository<Usuario, Long> {
-    Usuario findByCorreoAndContrasena(String correo, String contrasena );
+    // Método para buscar un usuario por su correo y contraseña
+    Usuario findByCorreoAndContrasena(String correo, String contrasena);
 }
+

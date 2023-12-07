@@ -19,14 +19,16 @@ public class VuelosService {
 
     private final VuelosDao vuelosDao;
 
+    // Constructor que inyecta una instancia de VuelosDao al servicio
     @Autowired
     public VuelosService(VuelosDao vuelosDao) {
         this.vuelosDao = vuelosDao;
     }
 
+    // Método para obtener todos los vuelos disponibles
+    // Retorna una lista de objetos Vuelos que representa los vuelos almacenados en la base de datos
     public List<Vuelos> getVuelosDisponibles() {
         return vuelosDao.findAll();
     }
-
-
 }
+

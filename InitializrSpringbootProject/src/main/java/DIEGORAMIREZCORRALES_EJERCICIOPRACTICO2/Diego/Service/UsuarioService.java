@@ -11,6 +11,13 @@ import DIEGORAMIREZCORRALES_EJERCICIOPRACTICO2.Diego.Domain.Usuario;
  * @author ROURY
  */
 public interface UsuarioService {
-    Usuario autenticarUsuario(String correo, String contrasena );
-    Usuario save(Usuario nombre_usuario );
+
+    // Método para autenticar a un usuario dado su correo y contraseña
+    // Retorna el objeto Usuario si la autenticación es exitosa, de lo contrario, retorna null
+    Usuario autenticarUsuario(String correo, String contrasena);
+
+    // Método para guardar un nuevo usuario en la base de datos
+    // Retorna el objeto Usuario guardado
+    Usuario save(Usuario usuario);
 }
+
