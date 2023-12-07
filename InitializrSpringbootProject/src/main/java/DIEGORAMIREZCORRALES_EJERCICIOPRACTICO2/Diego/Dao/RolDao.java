@@ -4,10 +4,13 @@
  */
 package DIEGORAMIREZCORRALES_EJERCICIOPRACTICO2.Diego.Dao;
 
+import DIEGORAMIREZCORRALES_EJERCICIOPRACTICO2.Diego.Domain.Rol;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 /**
  *
  * @author ROURY
  */
-public interface Dao {
-    
+public interface RolDao extends JpaRepository<Rol, Long> {
+
 }

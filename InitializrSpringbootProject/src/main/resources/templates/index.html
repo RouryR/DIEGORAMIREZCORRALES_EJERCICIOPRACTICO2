@@ -6,24 +6,60 @@
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
-        
-        <section>
 
-            <p
-                style="color: white; font-weight: bold; font-size: 25px; background-color: #2069AD; margin-top: 0; text-align: center; border-bottom: 1px solid black">
-                <i class="fa-solid fa-briefcase fa-beat fa-sm" style="color: #ffffff;"></i> ¡Bienvenido!
-            </p>
+        <div class="grid-container">
+            <div class="grid-item ">
+                <p
+                    style="color: black; font-weight: bold; font-size: 25px; background-color: #F2A007; margin-top: 0; text-align: center; border: 1px solid black">
+                    Cartagena</p>
+                <iframe
+                    src="https://www.youtube.com/embed/L34H6ycGMkY?si=Elj2vbbWU3703buC"
+                    width="420" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0" class="d-block mx-auto"></iframe>
+            </div>
 
-            <h2>Sobre nosotros</h2>
-            <p>Somos un grupo dinámico con gran experiencia en el mercado del desarrollo de software empresarial
-                aplicables al ámbito del ERP
-                en áreas como Ruteo y Distribución, Financiero Contable, Importaciones, Manufactura y más..</p>
+            <div class="grid-item ">
+                <p
+                    style="color: black; font-weight: bold; font-size: 25px; background-color: #F2A007; margin-top: 0; text-align: center; border: 1px solid black">
+                    Argentina</p>
+                <iframe
+                    src="https://www.youtube.com/embed/AxR-wrIOoQw?si=WtF8QfVL_WXwEW-P"
+                    width="420" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0" class="d-block mx-auto"></iframe>
+            </div>
 
-            <p2>Con EXCALIBUR-TECH, usted como empresario, desde cualquier rincón del mundo podrá ver el tiempo real, el
-                comportamiento de
-                su compañía, a tan solo un click de su mano.</p2>
+            <div class="grid-item">
+                <p
+                    style="color: black; font-weight: bold; font-size: 25px; background-color: #F2A007; margin-top: 0; text-align: center; border: 1px solid black">
+                    Irlanda</p>
+                <iframe
+                    src="https://www.youtube.com/embed/SZ2mSFZyRcY?si=G1u79UcYEUzMekuG"
+                    width="420" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0" class="d-block mx-auto"></iframe>
 
-        </section>
+            </div>
+        </div>
+
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 10px;
+                padding: 82px;
+            }
+
+            .grid-item {
+                padding: 10px;
+                text-align: center;
+            }
+
+            .grid-item .row1 {
+                padding: 10px;
+                text-align: center;
+                border: 1px solid black;
+            }
+        </style>
+
         <footer th:replace="~{layout/plantilla :: footer}"/>          
     </body>
 </html>
