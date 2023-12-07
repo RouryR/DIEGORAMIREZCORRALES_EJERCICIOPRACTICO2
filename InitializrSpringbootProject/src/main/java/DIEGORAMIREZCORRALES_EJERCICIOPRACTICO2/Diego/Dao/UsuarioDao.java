@@ -11,11 +11,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  * @author ROURY
  */
-public interface UsuarioDao extends JpaRepository<Usuario, Long> {    
-    Usuario findByUsername(String nombre_usuario);
-     Usuario findByUsernameAndPassword(String nombre_usuario, String contrasena);
-
-    Usuario findByUsernameOrCorreo(String nombre_usuario, String correo);
-
-    boolean existsByUsernameOrCorreo(String nombre_usuario, String correo);
+public interface UsuarioDao extends JpaRepository<Usuario, Long> {
+    Usuario findByCorreoAndContrasena(String correo, String contrasena );
 }

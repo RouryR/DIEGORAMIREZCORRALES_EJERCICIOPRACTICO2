@@ -4,13 +4,14 @@
  */
 package DIEGORAMIREZCORRALES_EJERCICIOPRACTICO2.Diego.Dao;
 
-import DIEGORAMIREZCORRALES_EJERCICIOPRACTICO2.Diego.Domain.Rol;
+import DIEGORAMIREZCORRALES_EJERCICIOPRACTICO2.Diego.Domain.Vuelos;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author ROURY
  */
-public interface RolDao extends JpaRepository<Rol, Long> {
-
+public interface VuelosDao extends JpaRepository<Vuelos, Long> {
+    List<Vuelos> findAll();  // Asegúrate de tener este método en la interfaz.
 }
